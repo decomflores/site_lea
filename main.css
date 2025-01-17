@@ -3,8 +3,28 @@
     box-sizing: border-box;
     font-family: "Archivo Black", sans-serif;
     color: white;
-    background-color: #0b1925;
+    background-color: rgb(11, 25, 37);
     text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Fica acima de outros elementos */
+    border-bottom: 1px solid white; /* Linha inferior branca */
+    transition: background-color 0.3s ease-in-out; /* Suavidade na troca de fundo */
+}
+
+/* Adiciona espaçamento no conteúdo para compensar a navbar fixa */
+body {
+    padding-top: 70px; /* Ajuste baseado na altura da navbar */
+}
+
+/* Modifica o estilo da navbar em rolagem */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 1); /* Fundo totalmente opaco ao rolar */
 }
 
 .hero {
@@ -15,18 +35,6 @@
     justify-content: center;
     transform: scale(1); /* Tamanho base */
     transition: transform 0.3s ease-in-out; /* Transição suave */
-}
-
-@media (max-width: 768px) {
-    .hero {
-        transform: scale(1); /* Reduzir em telas menores */
-    }
-}
-
-@media (min-width: 1200px) {
-    .hero {
-        transform: scale(1.2); /* Aumentar em telas maiores */
-    }
 }
 
 .container h2 {

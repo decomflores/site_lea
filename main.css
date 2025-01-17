@@ -1,0 +1,55 @@
+* {
+    margin: auto 0;
+    box-sizing: border-box;
+    font-family: "Archivo Black", sans-serif;
+    color: white;
+    background-color: #0b1925;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    background: url('img/lea_gringa_de_cria.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1); /* Tamanho base */
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        transform: scale(1); /* Reduzir em telas menores */
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        transform: scale(1.2); /* Aumentar em telas maiores */
+    }
+}
+
+.container h2 {
+    font-size: 36px;
+}
+
+.container .card-show h3 {
+    font-size: 24px;
+}
+
+.container .card-show p {
+    font-size: 18px;
+}
+
+.container .card-show span {
+    font-size: 14px;
+}
+
+#links img {
+    max-width: 38px;
+}
+
+.botao-link {
+    display: flex;
+    flex-direction: column;
+}

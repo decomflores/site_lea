@@ -1,40 +1,177 @@
 * {
+    padding: 0;
     margin: auto 0;
     box-sizing: border-box;
     font-family: "Archivo Black", sans-serif;
     color: white;
-    background-color: rgb(11, 25, 37);
+    background-color: #0b1925;
     text-align: center;
 }
 
+/* Configurações básicas de animação */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .navbar {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1030; /* Fica acima de outros elementos */
-    border-bottom: 1px solid white; /* Linha inferior branca */
-    transition: background-color 0.3s ease-in-out; /* Suavidade na troca de fundo */
+    z-index: 1030;
+    border-bottom: 1px solid white;
+    transition: background-color 0.3s ease-in-out;
+    background-color: transparent;
 }
 
-/* Adiciona espaçamento no conteúdo para compensar a navbar fixa */
-body {
-    padding-top: 70px; /* Ajuste baseado na altura da navbar */
+.navbar .nav-container {
+    margin: 0 auto;
 }
 
-/* Modifica o estilo da navbar em rolagem */
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 1); /* Fundo totalmente opaco ao rolar */
+.navbar .nav-container button {
+    background-color: transparent;
 }
 
-.hero {
-    height: 100vh;
-    background: url('img/lea_gringa_de_cria.jpg') center/cover no-repeat;
+@media (max-width: 767px) {
+    .navbar .navbar-collapse {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-collapse {
+        font-size: 36px;
+    }
+}
+
+.navbar .navbar-collapse a {
+    color: white;
+}
+
+.navbar .navbar-collapse a:hover {
+    transition: 0.7s;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-    transform: scale(1); /* Tamanho base */
-    transition: transform 0.3s ease-in-out; /* Transição suave */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.hero-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    background-color: transparent;
+    animation: fadeInUp 1.6s;
+}
+
+@media (max-width: 676px) {
+    .hero-image {
+        max-width: 100%;
+    }
+}
+@media (min-width: 677px) and (max-width: 1240px) {
+    .hero-image {
+        max-width: 500px;
+    }
+}
+@media (min-width: 1241px) {
+    .hero-image {
+        max-width: 840px;
+    }
+}
+
+.container-palco {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.lea-palco {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mute-button {
+    position: absolute;
+    top: 20px; /* Posição do botão no topo */
+    right: 20px; /* Posição do botão no lado direito */
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Garante que o botão fique acima do vídeo */
+}
+
+.mute-button img {
+    background-color: transparent;
+}
+
+#mute-icon {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%); /* Ajuste de contraste para ícones visíveis em vídeos escuros */
+}
+
+#agenda {
+    animation: fadeIn 1s;
 }
 
 .container h2 {

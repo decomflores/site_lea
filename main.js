@@ -8,11 +8,10 @@ document.getElementById('interestForm').addEventListener('submit', async functio
     };
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzfAzkLXm966czbs6DF9-x9bzBAZ7QGmeYKERMVJE-NrF1uS0TGJN9MPpOJC34nS12fEA/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbySKHB82x8cD-V6qnIoDHn_yPqXOavUdB9PXHUo8NPJqW-uMLv09HPzgDjVpha7qdouxQ/exec', {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: { 'Content-Type': 'application/json' },
-            mode: 'no-cors',
         });
 
         if (response.ok) {

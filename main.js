@@ -12,6 +12,7 @@ document.getElementById('interestForm').addEventListener('submit', async functio
             method: 'POST',
             body: JSON.stringify(formData),
             headers: { 'Content-Type': 'application/json' },
+            mode: 'no-cors',
         });
 
         if (response.ok) {

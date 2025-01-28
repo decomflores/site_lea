@@ -61,7 +61,7 @@
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary">Tenho Interesse</button>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
                     <div class="card-show d-flex justify-content-between align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
@@ -69,7 +69,7 @@
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary">Tenho Interesse</button>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
                     <div class="card-show d-flex justify-content-between align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
@@ -77,7 +77,7 @@
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary">Tenho Interesse</button>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
                     <div class="card-show d-flex justify-content-between align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
@@ -85,13 +85,42 @@
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary">Tenho Interesse</button>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
                 </div>
                 <!-- Repetir itens até completar 10 -->
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="interestModal" tabindex="-1" aria-labelledby="interestModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="interestModalLabel">Formulário de Interesse</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="interestForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    
 
     <!-- Sobre Mim -->
     <section id="links" class="py-5">

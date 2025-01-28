@@ -8,7 +8,7 @@ document.getElementById('interestForm').addEventListener('submit', async functio
     };
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbySKHB82x8cD-V6qnIoDHn_yPqXOavUdB9PXHUo8NPJqW-uMLv09HPzgDjVpha7qdouxQ/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbwnX0-UIrkx3cSZVkWpbFAQjWyMygXHsGEfbS6M4bV1hK9gxymvR086ynVId333Me3UGQ/exec', {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: { 'Content-Type': 'application/json' },

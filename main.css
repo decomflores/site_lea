@@ -138,7 +138,7 @@ body::before {
     text-align: center;
     margin-top: 24px;
     margin-bottom: 24px;
-    animation: oscillate 1.5s ease-in-out infinite;
+    animation: oscillate 2.3s ease-in-out infinite;
 }
 
 .hero-image img {
@@ -162,17 +162,30 @@ body::before {
 }
 
 .novo-show-container {
-    align-items: center;
-    padding: 12px;
+    position: relative; /* Para o pseudo-elemento ficar corretamente posicionado */
+    padding-top: 40px; /* Espaçamento superior para ajustar a posição do conteúdo */
+    padding-bottom: 10px; /* Ajuste o espaço inferior conforme necessário */
+    margin-bottom: 36px;
 }
 
 .novo-show-container .container {
-    margin-bottom: 24px;
-    margin-top: 24px;
-    padding: 12px;
+    position: relative; /* Para garantir que o conteúdo do container não seja sobreposto pela imagem */
+    z-index: 1; /* Faz com que o conteúdo do container fique acima da imagem */
+    text-align: center; /* Centraliza o texto dentro do container */
+}
+
+.novo-show-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%; /* Aumenta a imagem além dos limites */
+    height: 105%; /* Aumenta a imagem além dos limites */
     background-image: url('img/bg_txt.png');
-    background-size: cover; /* Faz com que a imagem cubra todo o container */
-    background-position: center center; /* Centraliza a imagem no container */
+    background-size: cover; /* Faz a imagem cobrir a área */
+    background-position: center center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat;
+    z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
 }
 
 .novo-show-container .container h2 {
@@ -192,12 +205,26 @@ body::before {
         5% 98%, 2% 50%    /* Lateral esquerda com leve variação */
     );
     color: white;
-    font-size: 24px;
+    font-size: 36px;
     border: none;
+    margin-bottom: 12px;
 }
 
 .novo-show-container .container button:hover {
-    transform: scale(120%);
+    transform: scale(110%);
+    transition: 0.7s;
+}
+
+.agenda-container {
+    margin-bottom: 48px;
+}
+
+.agenda-container a {
+    text-decoration: none;
+}
+
+.agenda-container a:hover {
+    text-decoration: underline #000000;
 }
 
 .agenda-container h2 {
@@ -247,21 +274,6 @@ body::before {
     color: #c23025;
 }
 
-.container-palco {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
-}
-
-.lea-palco {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 #agenda {
     animation: fadeIn 1s;
 }
@@ -282,12 +294,96 @@ body::before {
     font-size: 18px;
 }
 
-#links img {
-    max-width: 38px;
-    background-color: rgb(255, 255, 255, 0.8);
+/* PRÓXIMOS SHOWS */
+
+.cadastro-container {
+    padding: 36px;
+    background-color: black;
+    clip-path: polygon(
+    10% 5%,   90% 5%,    /* Topo irregular */
+    98% 40%, 85% 90%,   /* Lateral direita com deformação */
+    15% 95%, 5% 55%     /* Lateral esquerda com deformação */
+);
+}
+
+.cadastro-container-txt h2 {
+    font-size: 36px;
+}
+
+.cadastro-container button {
+    background-color: white;
+    font-size: 28px;
+    border: none;
+    padding: 16px;
+    clip-path: polygon(
+        10% 5%,   90% 5%,    /* Topo irregular */
+        98% 40%, 85% 90%,   /* Lateral direita com deformação */
+        15% 95%, 5% 55%     /* Lateral esquerda com deformação */
+    );
+    color: #c23025;
+}
+
+.cadastro-container button:hover{
+    background-color: #ffc831;
+    color: #000000;
+    transform: scale(1.1);
+    transition: 1.2s;
+}
+
+/* FIM PRÓXIMOS SHOWS */
+
+.container-palco {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    margin-top: 24px;
+}
+
+.lea-palco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .botao-link {
     display: flex;
     flex-direction: column;
+}
+
+.links-container h2 {
+    background-color: rgb(194, 48, 37, 0.8);
+    clip-path: polygon(
+        5% 8%,   95% 5%,   /* Topo irregular */
+        98% 50%, 90% 95%,  /* Lateral direita com deformação */
+        10% 92%, 2% 50%    /* Lateral esquerda com deformação */
+    );
+    max-width: 360px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.links-buttons a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.links-container .btn:hover {
+    transform: scale(1.08);
+    transition: 0.8s;
+}
+
+.links-container .btn-1 {
+    background-color: rgb(255, 200, 49, 0.85);
+}
+
+.links-container .btn-2 {
+    background-color: rgb(194, 48, 37, 0.8);
+}
+
+.links-container .btn-3 {
+    background-color: rgb(0, 0, 0, 0.8);
 }

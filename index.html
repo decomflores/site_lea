@@ -40,15 +40,17 @@
         </nav>
         <div class="hero-background">
             <div class="hero-image">
-                <img src="img/logo-2.png" alt="logo do show da lea maria">
+                <img src="img/hero.png" alt="logo do show da lea maria">
             </div>
         </div>
     </div>
 
     <section class="novo-show-container" id="novo-show" class="py-5 text-center">
         <div class="container">
-            <h2 class="mb-3">Não perca o lançamento do <span>novo especial de comédia!</span></h2>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Assista agora</button>
+            <h2 class="mb-3">Não perca o novo<span> especial <br/>de comédia!</span></h2>
+            <a href="https://www.youtube.com/watch?v=btFAgr6zfVE">
+                <button class="btn">Assista agora</button>
+            </a>
         </div>
     </section>
     
@@ -57,38 +59,44 @@
             <h2 class="mb-3">Agenda de Shows</h2>
             <div class="row">
                 <div class="col-12 mb-3">
-                    <div class="card-show card-show-impar d-flex align-items-center p-3 border rounded mb-2">
-                        <div class="info-shows me-2">
-                            <h3 class="mb-1 fs-1">01/02/2025</h3>
-                            <p class="mb-1">São Paulo - SP</p>
-                            <span class="mb-1">Teatro Frei Caneca</span>
+                    <a href="https://www.sympla.com.br/evento/lea-maria-em-sorocaba-alemalandra-stand-up-comedy/2814775">
+                        <div class="card-show card-show-impar d-flex align-items-center p-3 border rounded mb-2">
+                            <div class="info-shows me-2">
+                                <h3 class="mb-1 fs-1">14/03/2025 - 20h</h3>
+                                <p class="mb-1">Sorocaba - SP</p>
+                                <span class="mb-1">Black House - Clube de Comédia</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                    </a>
+                    <a href="https://bileto.sympla.com.br/event/102752/d/300806/s/2053189">
+                        <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                            <div class="info-shows me-2">
+                                <h3 class="mb-1">16/03/2025</h3>
+                                <p class="mb-1">São Paulo - SP</p>
+                                <span class="mb-1">Clube Barbixas de Comédia</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.sympla.com.br/evento/29-mar-lea-maria-londrina-pr/2811906">
+                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                            <div class="info-shows me-2">
+                                <h3 class="mb-1">29/03/2025</h3>
+                                <p class="mb-1">Londrina - PR</p>
+                                <span class="mb-1">AML Cultural</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
                             <h3 class="mb-1">01/02/2025</h3>
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                    </div>
-                    <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                        <div class="info-shows me-2">
-                            <h3 class="mb-1">01/02/2025</h3>
-                            <p class="mb-1">São Paulo - SP</p>
-                            <span class="mb-1">Teatro Frei Caneca</span>
-                        </div>
-                    </div>
-                    <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                        <div class="info-shows me-2">
-                            <h3 class="mb-1">01/02/2025</h3>
-                            <p class="mb-1">São Paulo - SP</p>
-                            <span class="mb-1">Teatro Frei Caneca</span>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
-    
+        
         <!-- Modal -->
         <div class="modal fade" id="interestModal" tabindex="-1" aria-labelledby="interestModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -118,6 +126,16 @@
             </div>
         </div>
     </section>
+
+    <section class="cadastro">
+        <div class="cadastro-container">
+            <div class="cadastro-container-txt">
+                <h2>Quer ficar por dentro dos próximos shows?</h2>
+                <h4>Só clicar no botão abaixo!</h4>
+            </div>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#interestModal">CLIQUE AQUI</button>
+        </div>
+    </section>
     
     <section id="video">
         <div class="container-palco">
@@ -131,27 +149,27 @@
     </section>
 
     <section id="links" class="py-5">
-        <div class="container text-center">
+        <div class="container links-container text-center">
             <h2 class="mb-4">Links</h2>
-            <div class="d-flex justify-content-center flex-wrap gap-3">
-                <div class="btn btn-outline-light d-flex flex-column align-items-center justify-content-center bg-light" style="width: 100px; height: 100px;">
-                    <img class="bg-light" src="img/icons/youtube_1384060.png" alt="ícone do youtube" style="width: 24px; height: 24px;">
-                    <a class="text-decoration-none text-dark bg-light" href="#" target="_blank">Youtube</a>
+            <div class="links-buttons d-flex justify-content-center flex-wrap gap-3">
+                <div class="btn btn-1 d-flex flex-column align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                    <img src="img/icons/youtube_1384060.png" alt="ícone do youtube" style="width: 24px; height: 24px;">
+                    <a href="#" target="_blank">Youtube</a>
                 </div>
-                <div class="btn btn-outline-light d-flex flex-column align-items-center justify-content-center bg-light" style="width: 100px; height: 100px;">
-                    <img class="bg-light" src="img/icons/tiktok_3116490.png" alt="ícone do youtube" style="width: 24px; height: 24px;">
-                    <a class="text-decoration-none text-dark bg-light" href="#" target="_blank">TikTok</a>
+                <div class="btn btn-2 btn-outline-light d-flex flex-column align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                    <img src="img/icons/tiktok_3116490.png" alt="ícone do youtube" style="width: 24px; height: 24px;">
+                    <a href="#" target="_blank">TikTok</a>
                 </div>
-                <div class="btn btn-outline-light d-flex flex-column align-items-center justify-content-center bg-light" style="width: 100px; height: 100px;">
-                    <img class="bg-light" src="img/icons/instagram_2111463.png" alt="ícone do youtube" style="width: 24px; height: 24px;">
-                    <a class="text-decoration-none text-dark bg-light" href="#" target="_blank">Instagram</a>
+                <div class="btn btn-3 btn-outline-light d-flex flex-column align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                    <img src="img/icons/instagram_2111463.png" alt="ícone do youtube" style="width: 24px; height: 24px;">
+                    <a href="#" target="_blank">Instagram</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-white text-center py-3">
+    <footer class="text-center py-3 bg-dark">
         <p class="mb-0">Todos os direitos reservados &copy; 2025 Lea Maria</p>
     </footer>
 

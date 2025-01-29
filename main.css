@@ -1,10 +1,26 @@
+@font-face {
+    font-family: 'Chinese Rocks Rg';
+    src: url('fonts/ChineseRocksRg-Regular.woff') format('woff2'),
+        url('fonts/ChineseRocksRg-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Cores
+
+Amarelo: #ffc831
+Vermelho: #c23025
+
+
+*/
+
 * {
     padding: 0;
     margin: auto 0;
     box-sizing: border-box;
-    font-family: "Archivo Black", sans-serif;
-    color: white;
-    background-color: #0b1925;
+    font-family: "Chinese Rocks Rg", sans-serif;
+    color: #ffc831;
     text-align: center;
 }
 
@@ -44,6 +60,36 @@
     }
 }
 
+@keyframes oscillate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.05) rotate(2deg); /* Oscila um pouco e gira levemente */
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+body {
+    position: relative;
+    background-image: url('img/bg_site.png');
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Ajuste o valor de opacidade conforme necessário */
+    z-index: -1; /* Garante que o filtro fique atrás do conteúdo */
+}
+
 .navbar {
     top: 0;
     left: 0;
@@ -51,7 +97,11 @@
     z-index: 1030;
     border-bottom: 1px solid white;
     transition: background-color 0.3s ease-in-out;
-    background-color: transparent;
+    background-color: #ffc831;
+}
+
+.nav-item a {
+    font-size: 22px;
 }
 
 .navbar .nav-container {
@@ -82,50 +132,22 @@
     transition: 0.7s;
 }
 
-.hero-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.hero-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-overlay {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: transparent;
-}
-
 .hero-image {
-    width: auto;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    animation: oscillate 1.5s ease-in-out infinite;
+}
+
+.hero-image img {
     max-width: 100%;
-    height: auto;
-    background-color: transparent;
-    animation: fadeInUp 1.6s;
 }
 
 @media (max-width: 676px) {
-    .hero-image {
-        max-width: 100%;
+    .hero-image img {
+        max-width: 90%;
     }
 }
 @media (min-width: 677px) and (max-width: 1240px) {
@@ -139,35 +161,105 @@
     }
 }
 
+.novo-show-container {
+    align-items: center;
+    padding: 12px;
+}
+
+.novo-show-container .container {
+    margin-bottom: 24px;
+    margin-top: 24px;
+    padding: 12px;
+    background-image: url('img/bg_txt.png');
+    background-size: cover; /* Faz com que a imagem cubra todo o container */
+    background-position: center center; /* Centraliza a imagem no container */
+}
+
+.novo-show-container .container h2 {
+    font-size: 40px;
+    color: rgb(194, 48, 37);
+}
+
+.novo-show-container .container h2 span {
+    color: black;
+}
+
+.novo-show-container .container button {
+    background-color: rgb(194, 48, 37, 0.8);
+    clip-path: polygon(
+        3% 4%,  97% 2%,   /* Topo ligeiramente irregular */
+        98% 50%, 95% 96%, /* Lateral direita com leve variação */
+        5% 98%, 2% 50%    /* Lateral esquerda com leve variação */
+    );
+    color: white;
+    font-size: 24px;
+    border: none;
+}
+
+.novo-show-container .container button:hover {
+    transform: scale(120%);
+}
+
+.agenda-container h2 {
+    padding: 12px;
+    background-color: rgb(194, 48, 37, 0.8);
+    clip-path: polygon(
+        5% 8%,   95% 5%,   /* Topo irregular */
+        98% 50%, 90% 95%,  /* Lateral direita com deformação */
+        10% 92%, 2% 50%    /* Lateral esquerda com deformação */
+    );
+}
+
+.agenda-container .container h2 {
+    font-size: 40px;
+}
+
+.card-show {
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Alinha o texto no centro */
+    width: 100%; /* Garante que ocupe toda a largura do container */
+}
+
+.card-show-par {
+    background-color: rgb(194, 48, 37, 0.8);
+    clip-path: polygon(
+        5% 8%,   95% 5%,   /* Topo irregular */
+        98% 50%, 90% 95%,  /* Lateral direita com deformação */
+        10% 92%, 2% 50%    /* Lateral esquerda com deformação */
+    );
+}
+
+.card-show-impar {
+    background-color: rgb(255, 200, 49, 0.8);
+    clip-path: polygon(
+        5% 8%,   95% 5%,   /* Topo irregular */
+        98% 50%, 90% 95%,  /* Lateral direita com deformação */
+        10% 92%, 2% 50%    /* Lateral esquerda com deformação */
+    );
+}
+
+.card-show-impar .info-shows h3,
+.card-show-impar .info-shows p,
+.card-show-impar .info-shows span {
+    color: #c23025;
+}
+
 .container-palco {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
 }
 
 .lea-palco {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.mute-button {
-    position: absolute;
-    top: 20px; /* Posição do botão no topo */
-    right: 20px; /* Posição do botão no lado direito */
-    border: none;
-    cursor: pointer;
-    z-index: 10; /* Garante que o botão fique acima do vídeo */
-}
-
-.mute-button img {
-    background-color: transparent;
-}
-
-#mute-icon {
-    width: 40px;
-    height: 40px;
-    filter: invert(100%); /* Ajuste de contraste para ícones visíveis em vídeos escuros */
 }
 
 #agenda {
@@ -179,19 +271,20 @@
 }
 
 .container .card-show h3 {
-    font-size: 24px;
+    font-size: 34px;
 }
 
 .container .card-show p {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .container .card-show span {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 #links img {
     max-width: 38px;
+    background-color: rgb(255, 255, 255, 0.8);
 }
 
 .botao-link {

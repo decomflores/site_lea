@@ -39,58 +39,56 @@
             </div>
         </nav>
         <div class="hero-background">
-            <video class="hero-video" autoplay loop muted playsinline>
-                <source src="./img/background_universe.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
-        </div>
-        <div class="hero-overlay">
-            <img src="img/73119301-3944-42d7-a085-d5b025275279.png" alt="Imagem PNG" class="hero-image">
+            <div class="hero-image">
+                <img src="img/logo-2.png" alt="logo do show da lea maria">
+            </div>
         </div>
     </div>
 
-    <!-- Agenda -->
-    <section id="agenda" class="py-5">
+    <section class="novo-show-container" id="novo-show" class="py-5 text-center">
+        <div class="container">
+            <h2 class="mb-3">Não perca o lançamento do <span>novo especial de comédia!</span></h2>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Assista agora</button>
+        </div>
+    </section>
+    
+    <section class="agenda-container" id="agenda" class="py-5">
         <div class="container">
             <h2 class="mb-3">Agenda de Shows</h2>
             <div class="row">
                 <div class="col-12 mb-3">
-                    <div class="card-show d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                    <div class="card-show card-show-impar d-flex align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
-                            <h3 class="mb-1">01/02/2025</h3>
+                            <h3 class="mb-1 fs-1">01/02/2025</h3>
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
-                    <div class="card-show d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                    <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
                             <h3 class="mb-1">01/02/2025</h3>
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
-                    <div class="card-show d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                    <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
                             <h3 class="mb-1">01/02/2025</h3>
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
-                    <div class="card-show d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                    <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
                         <div class="info-shows me-2">
                             <h3 class="mb-1">01/02/2025</h3>
                             <p class="mb-1">São Paulo - SP</p>
                             <span class="mb-1">Teatro Frei Caneca</span>
                         </div>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interestModal">Tenho Interesse</button>
                     </div>
                 </div>
-                <!-- Repetir itens até completar 10 -->
             </div>
         </div>
+    
         <!-- Modal -->
         <div class="modal fade" id="interestModal" tabindex="-1" aria-labelledby="interestModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -121,15 +119,18 @@
         </div>
     </section>
     
-
-    <!-- Sobre Mim -->
-    <section id="links" class="py-5">
+    <section id="video">
         <div class="container-palco">
-            <video class="lea-palco" id="video" autoplay controls loop muted playsinline>
-                <source src="img/lea-palco.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
+            <iframe class="lea-palco" id="video" 
+                    width="100%" height="100%" 
+                    src="https://www.youtube.com/embed/M5jq1YHxcbE?autoplay=1&mute=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
         </div>
+    </section>
+
+    <section id="links" class="py-5">
         <div class="container text-center">
             <h2 class="mb-4">Links</h2>
             <div class="d-flex justify-content-center flex-wrap gap-3">

@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Pegue os valores dos campos do formulário
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
+        const city = document.getElementById('city').value;
 
         // Prepare os dados a serem enviados
         const data = {
             name: name,
             email: email,
-            phone: phone
+            city: city
         };
 
         // URL do seu script Google Apps

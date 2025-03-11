@@ -17,11 +17,16 @@ Vermelho: #c23025
 
 * {
     padding: 0;
-    margin: auto 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Chinese Rocks Rg", sans-serif;
     color: #ffc831;
     text-align: center;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Configurações básicas de animação */
@@ -132,22 +137,28 @@ body::before {
     transition: 0.7s;
 }
 
-.hero-image {
+.hero-background {
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 24px;
     margin-bottom: 24px;
-    animation: oscillate 2.3s ease-in-out infinite;
+    overflow: hidden;
 }
 
-.hero-image img {
-    max-width: 100%;
+.hero-background img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width: 676px) {
-    .hero-image img {
-        max-width: 90%;
+    .hero-background img {
+        width: 160vw;
+        height: auto;
+        max-height: 100vh;
     }
 }
 @media (min-width: 677px) and (max-width: 1240px) {

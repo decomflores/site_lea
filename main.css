@@ -1,7 +1,6 @@
 @font-face {
-    font-family: 'Chinese Rocks Rg';
-    src: url('fonts/ChineseRocksRg-Regular.woff') format('woff2'),
-        url('fonts/ChineseRocksRg-Regular.woff') format('woff');
+    font-family: 'Marquisette';
+    src: url('fonts/Marquisette.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -19,8 +18,8 @@ Vermelho: #c23025
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Chinese Rocks Rg", sans-serif;
-    color: #ffc831;
+    font-family: 'Marquisette', 'sans-serif';
+    color: black;
     text-align: center;
 }
 
@@ -79,20 +78,9 @@ html, body {
 
 body {
     position: relative;
-    background-image: url('img/bg_site.png');
-    background-size: cover;
+    background-image: url('img/bg_site3.png');
+    background-size:contain;
     background-position: center;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7); /* Ajuste o valor de opacidade conforme necessário */
-    z-index: -1; /* Garante que o filtro fique atrás do conteúdo */
 }
 
 .navbar {
@@ -102,7 +90,7 @@ body::before {
     z-index: 1030;
     border-bottom: 1px solid white;
     transition: background-color 0.3s ease-in-out;
-    background-color: #ffc831;
+    background-color: rgb(162, 146, 14, 40%);
 }
 
 .nav-item a {
@@ -172,10 +160,91 @@ body::before {
     }
 }
 
+.agenda-container {
+    margin-bottom: 24px;
+}
+
+.agenda-container a {
+    text-decoration: none;
+}
+
+.agenda-container a:hover {
+    text-decoration: underline #000000;
+}
+
+.agenda-container h2 {
+    color: #fff;
+    padding: 12px;
+}
+
+.agenda-container .container h2 {
+    font-size: 60px;
+}
+
+.container-lista-shows {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-show {
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Alinha o texto no centro */
+    width: 100%; /* Garante que ocupe toda a largura do container */
+}
+
+.card-show-par {
+    background-image: url('img/bg_par.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-show-impar {
+    background-image: url('img/bg_impar.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-show h3 {
+    font-weight: bold;
+}
+
+.card-show p {
+    font-weight: normal;
+}
+
+.card-show-impar .info-shows h3,
+.card-show-impar .info-shows p {
+    color: black;
+}
+
+
+#agenda {
+    animation: fadeIn 1s;
+}
+
+.container .card-show h3 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.container .card-show p {
+    margin-top: -10px;
+    font-size: 22px;
+}
+
+/* PRÓXIMOS SHOWS */
+
+/* NOVO SHOW */
+
 .novo-show-container {
     position: relative; /* Para o pseudo-elemento ficar corretamente posicionado */
-    padding-top: 40px; /* Espaçamento superior para ajustar a posição do conteúdo */
-    padding-bottom: 10px; /* Ajuste o espaço inferior conforme necessário */
+    padding-top: 70px; /* Espaçamento superior para ajustar a posição do conteúdo */
+    padding-bottom: 40px; /* Ajuste o espaço inferior conforme necessário */
     margin-bottom: 36px;
 }
 
@@ -190,18 +259,18 @@ body::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 105%; /* Aumenta a imagem além dos limites */
-    height: 105%; /* Aumenta a imagem além dos limites */
-    background-image: url('img/bg_txt.png');
-    background-size: cover; /* Faz a imagem cobrir a área */
-    background-position: center center; /* Centraliza a imagem de fundo */
+    width: 100%; /* Aumenta a imagem além dos limites */
+    height: 100%; /* Aumenta a imagem além dos limites */
+    background-image: url('img/bg_txt3.png');
+    background-size: contain; /* Faz a imagem cobrir a área */
+    background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat;
     z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
 }
 
 .novo-show-container .container h2 {
     font-size: 40px;
-    color: rgb(194, 48, 37);
+    color: #0a0c0c;
 }
 
 .novo-show-container .container h2 span {
@@ -209,12 +278,9 @@ body::before {
 }
 
 .novo-show-container .container button {
-    background-color: rgb(194, 48, 37, 0.8);
-    clip-path: polygon(
-        3% 4%,  97% 2%,   /* Topo ligeiramente irregular */
-        98% 50%, 95% 96%, /* Lateral direita com leve variação */
-        5% 98%, 2% 50%    /* Lateral esquerda com leve variação */
-    );
+    background-image: url('img/bg_btn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     font-size: 36px;
     border: none;
@@ -226,86 +292,7 @@ body::before {
     transition: 0.7s;
 }
 
-.agenda-container {
-    margin-bottom: 48px;
-}
-
-.agenda-container a {
-    text-decoration: none;
-}
-
-.agenda-container a:hover {
-    text-decoration: underline #000000;
-}
-
-.agenda-container h2 {
-    padding: 12px;
-    background-color: rgb(194, 48, 37, 0.8);
-    clip-path: polygon(
-        5% 8%,   95% 5%,   /* Topo irregular */
-        98% 50%, 90% 95%,  /* Lateral direita com deformação */
-        10% 92%, 2% 50%    /* Lateral esquerda com deformação */
-    );
-}
-
-.agenda-container .container h2 {
-    font-size: 40px;
-}
-
-.card-show {
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    text-align: center; /* Alinha o texto no centro */
-    width: 100%; /* Garante que ocupe toda a largura do container */
-}
-
-.card-show-par {
-    background-color: rgb(194, 48, 37, 0.8);
-    clip-path: polygon(
-        5% 8%,   95% 5%,   /* Topo irregular */
-        98% 50%, 90% 95%,  /* Lateral direita com deformação */
-        10% 92%, 2% 50%    /* Lateral esquerda com deformação */
-    );
-}
-
-.card-show-impar {
-    background-color: rgb(255, 200, 49, 0.8);
-    clip-path: polygon(
-        5% 8%,   95% 5%,   /* Topo irregular */
-        98% 50%, 90% 95%,  /* Lateral direita com deformação */
-        10% 92%, 2% 50%    /* Lateral esquerda com deformação */
-    );
-}
-
-.card-show-impar .info-shows h3,
-.card-show-impar .info-shows p,
-.card-show-impar .info-shows span {
-    color: #c23025;
-}
-
-#agenda {
-    animation: fadeIn 1s;
-}
-
-.container h2 {
-    font-size: 36px;
-}
-
-.container .card-show h3 {
-    font-size: 34px;
-}
-
-.container .card-show p {
-    font-size: 22px;
-}
-
-.container .card-show span {
-    font-size: 18px;
-}
-
-/* PRÓXIMOS SHOWS */
+/* NOVO SHOW - FIM */
 
 .cadastro-container {
     padding: 36px;
@@ -318,7 +305,13 @@ body::before {
 }
 
 .cadastro-container-txt h2 {
+    color: #fff;
     font-size: 36px;
+}
+
+.cadastro-container-txt h4 {
+    color: #fff;
+    font-size: 18px;
 }
 
 .cadastro-container button {

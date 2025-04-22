@@ -6,6 +6,9 @@
     <title>Lea Maria</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
@@ -14,7 +17,6 @@
 <body>
 
     <!-- Navbar -->
-
 
     <!-- Hero -->
     <div class="hero-container">
@@ -27,6 +29,12 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#agenda">Agenda de Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#novo-show">Novo Show</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cadastro">Fale Conosco</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#links">Links</a>
@@ -42,120 +50,90 @@
             <img src="img/hero-img-2.png" alt="logo do show da lea maria">
         </div>
     </div>
-
-    <section class="novo-show-container" id="novo-show" class="py-5 text-center">
-        <div class="container">
-            <h2 class="mb-3">Não perca o novo<span> especial <br/>de comédia!</span></h2>
-            <a href="https://www.youtube.com/watch?v=btFAgr6zfVE">
-                <button class="btn">Assista agora</button>
-            </a>
-        </div>
-    </section>
     
     <section class="agenda-container" id="agenda" class="py-5">
         <div class="container">
             <h2 class="mb-3">Agenda de Shows</h2>
             <div class="row">
                 <div class="col-12 mb-3 lista-shows">
-                    <a href="https://www.ingressonacional.com.br/evento/29257/lea-maria--toledo">
-                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">30/04/2025</h3>
-                                <p class="mb-1">Toledo - PR</p>
-                                <span class="mb-1">Auditório Premen</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.ingressonacional.com.br/evento/29257/lea-maria--toledo">
+                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center mb-2">
+                            <h3>30/04/2025</h3>
+                            <p>Toledo - PR <br>
+                                Bull Garden</p>
                         </div>
                     </a>
-                    <a href="https://www.ingressonacional.com.br/evento/29256/lea-maria--cascavel">
-                        <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">01/05/2025</h3>
-                                <p class="mb-1">Cascavel - PR</p>
-                                <span class="mb-1">Hooligans Pub</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.ingressonacional.com.br/evento/29256/lea-maria--cascavel">
+                        <div class="card-show card-show-par d-flex justify-content-between align-items-center mb-2">
+                            <h3>01/05/2025</h3>
+                            <p>Cascavel - PR <br>
+                                Hooligans Pub</p>
                         </div>
                     </a>
-                    <a href="https://www.ingressonacional.com.br/evento/30891/lea-maria--marechal-candido-rondon">
-                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">02/05/2025</h3>
-                                <p class="mb-1">Marechal Cândido Rondon - PR</p>
-                                <span class="mb-1">Acimacar</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.ingressonacional.com.br/evento/30891/lea-maria--marechal-candido-rondon">
+                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center mb-2">
+                            <h3>02/05/2025</h3>
+                            <p>Marechal Cândido Rondon - PR <br>
+                                Acimacar</p>
                         </div>
                     </a>
-                    <a href="https://www.ingressonacional.com.br/evento/29255/lea-maria--prudentopolis">
-                        <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">03/05/2025</h3>
-                                <p class="mb-1">Prudentopolis - PR</p>
-                                <span class="mb-1">Sal Grosso Steak House</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.ingressonacional.com.br/evento/29255/lea-maria--prudentopolis">
+                        <div class="card-show card-show-par d-flex justify-content-between align-items-center mb-2">
+                            <h3>03/05/2025</h3>
+                            <p>Prudentópolis - PR <br>
+                                Sal Grosso Steak House</p>
                         </div>
                     </a>
-                    <a href="https://www.ingressonacional.com.br/evento/28396/lea-maria--guarapuava">
-                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">04/05/2025</h3>
-                                <p class="mb-1">Guarapuava - PR</p>
-                                <span class="mb-1">Zero 42 Shopping</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.ingressonacional.com.br/evento/28396/lea-maria--guarapuava">
+                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center mb-2">
+                            <h3>04/05/2025</h3>
+                            <p>Gruarapuava - PR <br>
+                                Zero 42 Shopping</p>
                         </div>
                     </a>
-                    <a href="https://bileto.sympla.com.br/event/105201/d/313508">
-                        <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">08/05/2025</h3>
-                                <p class="mb-1">Rio de Janeiro - RJ</p>
-                                <span class="mb-1">Teatro Cândido Mendes</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://bileto.sympla.com.br/event/105201/d/313508">
+                        <div class="card-show card-show-par d-flex justify-content-between align-items-center mb-2">
+                            <h3>08/05/2025</h3>
+                            <p>Rio de Janeiro - RJ <br>
+                                Teatro Cândido Mendes</p>
                         </div>
                     </a>
-                    <a href="https://www.sympla.com.br/evento/lea-maria-em-bh-comedia-stand-up-alemalandra/2824490">
-                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">10/05/2025</h3>
-                                <p class="mb-1">Belo Horizonte - MG</p>
-                                <span class="mb-1">Teatro Nossa Senhora das Dores</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.sympla.com.br/evento/lea-maria-em-bh-comedia-stand-up-alemalandra/2824490?referrer=site-lea.vercel.app">
+                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center mb-2">
+                            <h3>10/05/2025</h3>
+                            <p>Belo Horizonte - MG <br>
+                                Teatro Nossa Senhora das Dores</p>
                         </div>
                     </a>
-                    <a href="https://www.sympla.com.br/evento/lea-maria-em-alemalandra-rio-verde/2834087">
-                        <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">23/05/2025</h3>
-                                <p class="mb-1">Rio Verde - GO</p>
-                                <span class="mb-1">The Haus Coffee&Beer</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.sympla.com.br/evento/lea-maria-em-alemalandra-rio-verde/2834087">
+                        <div class="card-show card-show-par d-flex justify-content-between align-items-center mb-2">
+                            <h3>23/05/2025</h3>
+                            <p>Rio Verde - GO <br>
+                                The Haus Coffee&Beer</p>
                         </div>
                     </a>
-                    <a href="https://www.sympla.com.br/evento/lea-maria-em-alemalandra/2827169?referrer=linktr.ee">
-                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">24/05/2025</h3>
-                                <p class="mb-1">Goiânia - GO</p>
-                                <span class="mb-1">Guardians Comedy Club</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.sympla.com.br/evento/lea-maria-em-alemalandra/2827169?referrer=linktr.ee&referrer=site-lea.vercel.app">
+                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center mb-2">
+                            <h3>24/05/2025</h3>
+                            <p>Goiânia - GO <br>
+                                Guardians Comedy Club</p>
                         </div>
                     </a>
-                    <a href="https://www.sympla.com.br/evento/lea-maria-alemalandra-em-brasilia-25-de-maio/2850876">
-                        <div class="card-show card-show-par d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">25/05/2025</h3>
-                                <p class="mb-1">Brasília - DF</p>
-                                <span class="mb-1">Teatro da Escola Parque 308 Sul</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.sympla.com.br/evento/lea-maria-alemalandra-em-brasilia-25-de-maio/2850876?referrer=site-lea.vercel.app">
+                        <div class="card-show card-show-par d-flex justify-content-between align-items-center mb-2">
+                            <h3>25/05/2025</h3>
+                            <p>Brasília - DF <br>
+                                Escola Parque 308 Sul</p>
                         </div>
                     </a>
-                    <a href="https://www.sympla.com.br/evento/06-jun-lea-maria-em-alemalandra-porto-alegre-rs/2838395">
-                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center p-3 border rounded mb-2">
-                            <div class="info-shows me-2">
-                                <h3 class="mb-1">06/06/2025</h3>
-                                <p class="mb-1">Porto Alegre - RS</p>
-                                <span class="mb-1">Teatro Hebraica</span>
-                            </div>
+                    <a class="container-lista-shows" href="https://www.sympla.com.br/evento/06-jun-lea-maria-em-alemalandra-porto-alegre-rs/2838395?referrer=site-lea.vercel.app">
+                        <div class="card-show card-show-impar d-flex justify-content-between align-items-center mb-2">
+                            <h3>06/06/2025</h3>
+                            <p>Porto Alegre - RS <br>
+                                Teatro Hebraica</p>
                         </div>
                     </a>
+
                 </div>
             </div>
         </div>
@@ -190,7 +168,17 @@
         </div>
     </section>
 
-    <section class="cadastro">
+        
+    <section class="novo-show-container" id="novo-show" class="py-5 text-center">
+        <div class="container">
+            <h2 class="mb-3">Não perca o novo<span> especial <br/>de comédia!</span></h2>
+            <a href="https://www.youtube.com/watch?v=btFAgr6zfVE">
+                <button class="btn">Assista agora</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="cadastro" id="cadastro">
         <div class="cadastro-container">
             <div class="cadastro-container-txt">
                 <h2>Sua cidade não aparece na agenda?</h2>
@@ -199,7 +187,7 @@
             <button class="btn" data-bs-toggle="modal" data-bs-target="#interestModal">quero!</button>
         </div>
     </section>
-    
+
     <section id="video">
         <div class="container-palco">
             <iframe class="lea-palco" id="video" 

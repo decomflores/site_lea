@@ -358,7 +358,8 @@ body {
 }
 
 .links-container h2 {
-    background-color: rgb(194, 48, 37, 0.8);
+    font-size: 30px;
+    background-color: rgb(255, 200, 49, 70%);
     clip-path: polygon(
         5% 8%,   95% 5%,   /* Topo irregular */
         98% 50%, 90% 95%,  /* Lateral direita com deformação */
